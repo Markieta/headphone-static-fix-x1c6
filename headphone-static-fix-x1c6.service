@@ -1,0 +1,8 @@
+[Unit]
+Description=Fixes headphone audio static and crackling on the X1 Carbon in Linux
+
+[Service]
+ExecStart=/bin/bash -c "hda-verb /dev/snd/hwC0D0 0x1d SET_PIN_WIDGET_CONTROL 0x0"
+
+[Install]
+WantedBy=multi-user.target
